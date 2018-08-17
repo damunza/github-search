@@ -18,10 +18,10 @@ works: any =[];
 
     });
 
-    // this.gitrequest.getrepos().subscribe(cat=>{
-    //   console.log(cat)
-    //   this.works=cat;
-    // })
+    this.gitrequest.getrepos().subscribe(cat=>{
+      console.log(cat)
+      this.works=cat;
+    })
    }
 
 
