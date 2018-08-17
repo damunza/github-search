@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-import {environment} from '../../environments/environment';
+import {environment} from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,7 @@ private username: string;
   constructor(private http:HttpClient) {
 
     this.username= 'damunza'
+
 
   }
 
@@ -29,7 +30,8 @@ getrepos(){
 
 updateProfile(searchItem:string){
   let search_url = `${environment.mzizi}${searchItem}?access_token=${environment.token}`
-  return this.http.get(search_url)
+  return this.http.get(search_url);
+  // this.username=searchItem
 }
 updateRepo(searchItem:string){
   let api_url=`${environment.mzizi}${searchItem}/repos?access_token=${environment.token}`
