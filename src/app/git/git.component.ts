@@ -23,10 +23,10 @@ tafuta(searchItem: HTMLInputElement){
     this.results = data;
     console.log (this.results)
   });
-  // this.gitrequest.updateRepo('cherucole').subscribe(cow =>{
-  //   this.majibu=cow;
-  //   console.log(this.majibu)
-  // })
+  this.gitrequest.updateRepo('cherucole').subscribe(cow =>{
+    this.majibu=cow;
+    console.log(this.majibu)
+  })
 
     // was inside the constructor
 
