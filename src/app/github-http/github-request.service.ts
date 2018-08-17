@@ -23,8 +23,8 @@ getprofile(){
 
   return this.http.get(environment.mzizi + this.username + '?access_token=' + environment.token)
 }
-// getrepos(){
-//     return this.http.get(environment.mzizi + this.username + '/repos?access_token=' + environment.token)
-// }
+getrepos(){
+    return this.http.get(environment.mzizi + this.username + '/repos?access_token=' + environment.token)
+}
 
 }
