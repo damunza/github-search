@@ -2,3 +2,10 @@
   text-align: center;
   text-decoration: underline;
 }
+.ttc{
+  color: black ;
+}
+.ttc:hover{
+  text-decoration: none;
+  color: white ;
+}
