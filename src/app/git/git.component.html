@@ -16,16 +16,30 @@
     <p *ngIf='user.name'>{{user.name}}</p>
   </div>
   <img src="{{user.avatar_url}}" class="img-circle" alt="user image">
-  <button class="btn btn-info btn-sm"><a href="{{user.html_url}}">view on github</a></button>
+  <button class="btn btn-info btn-sm"><a class="ttc" href="{{user.html_url}}">view profile on github</a></button>
 </div><br><br>
 
+<div class="container">
 <div class="card-deck">
   <div class="card-title">
     <h4>REPOSITORIES</h4>
-  </div>
-  <div class="card-body" *ngFor="let work of works">
-      <h6>{{work.name}}</h6>
-      <p *ngIf='work.description'>{{work.description}}</p>
+  </div><br><br>
+  <div class="card-body" >
+
+        <div class="row" *ngFor="let work of works">
+          <div class="col-md-4">
+            <ul>
+              <li>
+            <h6>{{work.name}}</h6>
+          </li>
+        </ul>
+          </div>
+          <div class="col-md-8">
+            <p *ngIf='work.description'>{{work.description}}</p>
+          </div>
+
+        </div>
 
   </div>
+</div>
 </div>
