@@ -31,9 +31,9 @@ updateProfile(searchItem:string){
   let search_url = `${environment.mzizi}${searchItem}?access_token=${environment.token}`
   return this.http.get(search_url)
 }
-// updateRepo(searchItem:string){
-//   let api_url=`${environment.mzizi}${searchItem}/repos?access_token=${environment.token}`
-//   return this.http.get(api_url)
-// }
+updateRepo(searchItem:string){
+  let api_url=`${environment.mzizi}${searchItem}/repos?access_token=${environment.token}`
+  return this.http.get(api_url)
+}
 
 }
