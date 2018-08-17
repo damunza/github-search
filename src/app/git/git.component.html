@@ -24,6 +24,8 @@
     <h4>REPOSITORIES</h4>
   </div>
   <div class="card-body" *ngFor="let work of works">
-      {{work.name}}
+      <h6>{{work.name}}</h6>
+      <p *ngIf='work.description'>{{work.description}}</p>
+
   </div>
 </div>
