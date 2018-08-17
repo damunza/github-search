@@ -19,11 +19,11 @@ searchItem:string ;
    }
 
 tafuta(searchItem: HTMLInputElement){
-  this.gitrequest.updateProfile('cherucole').subscribe(data => {
+  this.gitrequest.updateProfile(searchItem.value).subscribe(data => {
     this.results = data;
     console.log (this.results)
   });
-  this.gitrequest.updateRepo('cherucole').subscribe(cow =>{
+  this.gitrequest.updateRepo(searchItem.value).subscribe(cow =>{
     this.majibu=cow;
     console.log(this.majibu)
   })
