@@ -15,7 +15,16 @@ public majibu;
 searchItem:string ;
 
   constructor(private gitrequest:GithubRequestService) {
+    this.gitrequest.getprofile().subscribe(rep=>{
+      // console.log(rep)
+      this.user=rep;
 
+    });
+
+    this.gitrequest.getrepos().subscribe(cat=>{
+      // console.log(cat)
+      this.works=cat;
+    })
    }
 
 tafuta(){
