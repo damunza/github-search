@@ -1,8 +1,14 @@
 
 <div class="jumbotron">
 <div class="container-fluid">
-  <input type="text" id="search" placeholder="search user or repositorty" name="username" #searchItem>
-  <button type="submit" class="btn btn-success btn-md" (click)='tafuta(searchItem)'>SEARCH</button>
+  <form  action="">
+    <div class="form-group">
+      <input type="text" id="search" placeholder="search user or repositorty" [(ngModel)]='searchItem' name="searchItem" (keyup)='tafuta()'>
+      <button type="submit" class="btn btn-success btn-md">SEARCH</button>
+    </div>
+
+  </form>
+
 </div>
 </div>
 
