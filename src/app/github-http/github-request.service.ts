@@ -29,9 +29,9 @@ getrepos(){
 }
 
 updateProfile(searchItem:string){
-  let search_url = `${environment.mzizi}${searchItem}?access_token=${environment.token}`
-  return this.http.get(search_url);
-  // this.username=searchItem
+  // let search_url = `${environment.mzizi}${searchItem}?access_token=${environment.token}`
+  // return this.http.get(search_url);
+  this.username=searchItem
 }
 updateRepo(searchItem:string){
   let api_url=`${environment.mzizi}${searchItem}/repos?access_token=${environment.token}`
