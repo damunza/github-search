@@ -18,15 +18,16 @@ searchItem:string ;
 
    }
 
-tafuta(searchItem: HTMLInputElement){
-  this.gitrequest.updateProfile(searchItem.value).subscribe(data => {
-    this.results = data;
-    console.log (this.results)
-  });
-  this.gitrequest.updateRepo(searchItem.value).subscribe(cow =>{
-    this.majibu=cow;
-    console.log(this.majibu)
-  })
+tafuta(){
+  this.gitrequest.updateProfile(this.searchItem)
+  // this.gitrequest.updateProfile(searchItem.value).subscribe(data => {
+  //   this.results = data;
+  //   console.log (this.results)
+  // });
+  // this.gitrequest.updateRepo(searchItem.value).subscribe(cow =>{
+  //   this.majibu=cow;
+  //   console.log(this.majibu)
+  // })
 
     // was inside the constructor
 
