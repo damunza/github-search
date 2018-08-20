@@ -9,9 +9,8 @@ import {GithubRequestService} from '../github-http/github-request.service';
 export class GitComponent implements OnInit {
 
 user: any =[];
-works: any =[];
-public results;
-public majibu;
+// works: any =[];
+
 searchItem:string ;
 
   constructor(private gitrequest:GithubRequestService) {
@@ -21,10 +20,10 @@ searchItem:string ;
 
     });
 
-    this.gitrequest.getrepos().subscribe(cat=>{
-      // console.log(cat)
-      this.works=cat;
-    })
+    // this.gitrequest.getrepos().subscribe(cat=>{
+    //   // console.log(cat)
+    //   this.works=cat;
+    // })
    }
 
 tafuta(){
@@ -46,10 +45,10 @@ tafuta(){
 
     });
 
-    this.gitrequest.getrepos().subscribe(cat=>{
-      // console.log(cat)
-      this.works=cat;
-    })
+    // this.gitrequest.getrepos().subscribe(cat=>{
+    //   // console.log(cat)
+    //   this.works=cat;
+    // })
 }
 
 
