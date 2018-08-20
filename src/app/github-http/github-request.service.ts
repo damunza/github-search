@@ -13,7 +13,7 @@ private username: string;
   constructor(private http:HttpClient) {
 
     this.username= 'damunza'
-
+    
 
   }
 
@@ -37,5 +37,6 @@ updateRepo(searchItem:string){
   let api_url=`${environment.mzizi}${searchItem}/repos?access_token=${environment.token}`
   return this.http.get(api_url)
 }
+
 
 }
