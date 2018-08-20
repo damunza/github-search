@@ -1,13 +1,45 @@
+<div class="container">
 
 <div class="jumbotron">
 <div class="container-fluid">
   <form  action="">
     <div class="form-group">
-      <input type="text" id="search" placeholder="search  repositorty" [(ngModel)]='ripo' name="ripo" (keyup)='lookFor()'>
-      <button type="submit" class="btn btn-info btn-md">SEARCH</button>
+      <input type="text" id="search" placeholder="search user" [(ngModel)]='searchItem' name="searchItem" (keyup)='tafuta()'>
+      <button type="submit" class="btn btn-success btn-md">SEARCH</button>
     </div>
 
   </form>
 
 </div>
+</div>
+
+<!--collecting data for repositories  -->
+
+<div class="card-deck">
+  <div class="card-title">
+    <h4>REPOSITORIES</h4>
+  </div><br><br>
+  <div class="card-body" >
+
+        <div class="row" *ngFor="let work of works">
+          <div class="col-md-4">
+            <ul>
+              <li>
+            <h6>{{work.name}}</h6>
+          </li>
+        </ul>
+          </div>
+          <div class="col-md-7">
+            <p *ngIf='work.description'>{{work.description}}</p>
+          </div>
+          <div class="col-md-1">
+            <button class="btn btn-primary btn-sm"><a class="ttw" target='_blank' href="{{work.html_url}}">view on github</a></button>
+          </div>
+
+        </div>
+
+  </div>
+</div>
+
+
 </div>
